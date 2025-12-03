@@ -52,7 +52,8 @@ const InfoPage: FunctionComponent<InfoPageProps> = function ({
   return (
     <div>
       <Global styles={globalStyle} />
-      <div css={TextStyle}>{title}</div>
+
+      <Text1>{title}</Text1>
       <Text1>{description}</Text1>
       <Text2 disable={true}>{author}</Text2>
     </div>
