@@ -13,6 +13,7 @@ export const palettes = {
     },
     background: {
       background: '#FAFAFA',
+      elevated: '#f1f1f1',
     },
   },
   dark: {
@@ -29,6 +30,7 @@ export const palettes = {
     },
     background: {
       background: '#1D1D1D',
+      elevated: '#2D2D2D',
     },
   },
 } as const;
@@ -36,6 +38,7 @@ export const palettes = {
 export const typography = {
   fontFamily: {
     base: `'Pretendard', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif`,
+    code: `'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Monaco, monospace`,
   },
   paragraph: {
     fontSize: '16px',
@@ -71,6 +74,7 @@ export const theme = {
     primarySoft: 'var(--color-primary-soft)',
     background: 'var(--color-bg)',
     backgroundBlur: 'var(--color-bg-blur)',
+    backgroundElevated: 'var(--color-background-elevated)',
     text: 'var(--color-text)',
     textSecondary: 'var(--color-text-secondary)',
     border: 'var(--color-border)',
