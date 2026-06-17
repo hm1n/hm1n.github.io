@@ -67,3 +67,12 @@ yarn-error.log
 .pnp.js
 # Yarn Integrity file
 .yarn-integrity
+
+
+.vscode/
+
+.github/*
+!.github/ISSUE_TEMPLATE/
+!.github/ISSUE_TEMPLATE/*.md
+!.github/pull_request_template.md
+AGENTS.md

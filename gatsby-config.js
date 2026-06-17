@@ -9,9 +9,10 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `hm1nlog`,
+    description: `hm1n's Tech Blog`,
+    author: `@hm1n`,
+    siteUrl: `https://hm1n.github.io/`, // TODO 배포 후 확인 필요
   },
   plugins: [
     {
@@ -19,6 +20,18 @@ module.exports = {
       options: {
         isTSX: true,
         allExtensions: true,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `hm1nlog`,
+        short_name: `hm1nlog`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#111111`,
+        display: `minimal-ui`,
+        icon: `src/images/icon.png`,
       },
     },
     `gatsby-plugin-emotion`,
@@ -29,8 +42,6 @@ module.exports = {
         path: `${__dirname}/contents`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -67,6 +78,32 @@ module.exports = {
             },
           },
         ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          formats: ['auto', 'webp'],
+          quality: 100,
+          placeholder: 'blurred',
+        },
+      },
+    },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-image`,
+    {
+      resolve: 'gatsby-plugin-canonical-urls',
+      options: {
+        siteUrl: 'https://hm1n.github.io/', // TODO 배포 후 수정 필요
+        stripQueryString: true,
+      },
+    },
+    'gatsby-plugin-sitemap',
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        policy: [{ userAgent: '*', allow: '/' }],
       },
     },
   ],
