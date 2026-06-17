@@ -8,6 +8,7 @@ const defaultStyle = css`
   :root {
     /* Typography */
     --font-family-base: ${typography.fontFamily.base};
+    --font-family-code: ${typography.fontFamily.code};
     --font-size-paragraph: ${typography.paragraph.fontSize};
     --line-height-paragraph: ${typography.paragraph.lineHeight};
 
@@ -16,6 +17,7 @@ const defaultStyle = css`
     --color-primary-soft: ${palettes.light.primary.light};
 
     --color-bg: ${palettes.light.background.background};
+    --color-background-elevated: ${palettes.light.background.elevated};
     --color-bg-blur: rgba(250, 250, 250, 0.4);
     --color-text: ${palettes.light.gray[500]};
     --color-text-secondary: ${palettes.light.gray[300]};
@@ -27,6 +29,22 @@ const defaultStyle = css`
     --color-gray-200: ${palettes.light.gray[200]};
     --color-gray-100: ${palettes.light.gray[100]};
 
+    --hljs-bg: var(--color-background-elevated);
+    --hljs-text: #24292f;
+    --hljs-keyword: #cf222e;
+    --hljs-title: #8250df;
+    --hljs-attr: #0550ae;
+    --hljs-string: #0a3069;
+    --hljs-built-in: #953800;
+    --hljs-comment: #6e7781;
+    --hljs-name: #116329;
+    --hljs-section: #0550ae;
+    --hljs-bullet: #3b2300;
+    --hljs-addition-bg: #dafbe1;
+    --hljs-addition-text: #116329;
+    --hljs-deletion-bg: #ffebe9;
+    --hljs-deletion-text: #82071e;
+
     color-scheme: light;
   }
 
@@ -37,6 +55,7 @@ const defaultStyle = css`
       --color-primary-soft: ${palettes.dark.primary.light};
 
       --color-bg: ${palettes.dark.background.background};
+      --color-background-elevated: ${palettes.dark.background.elevated};
       --color-bg-blur: rgba(29, 29, 29, 0.4);
       --color-text: ${palettes.dark.gray[500]};
       --color-text-secondary: ${palettes.dark.gray[300]};
@@ -48,6 +67,22 @@ const defaultStyle = css`
       --color-gray-200: ${palettes.dark.gray[200]};
       --color-gray-100: ${palettes.dark.gray[100]};
 
+      --hljs-bg: var(--color-background-elevated);
+      --hljs-text: #c9d1d9;
+      --hljs-keyword: #ff7b72;
+      --hljs-title: #d2a8ff;
+      --hljs-attr: #79c0ff;
+      --hljs-string: #a5d6ff;
+      --hljs-built-in: #ffa657;
+      --hljs-comment: #8b949e;
+      --hljs-name: #7ee787;
+      --hljs-section: #1f6feb;
+      --hljs-bullet: #f2cc60;
+      --hljs-addition-bg: #033a16;
+      --hljs-addition-text: #aff5b4;
+      --hljs-deletion-bg: #67060c;
+      --hljs-deletion-text: #ffdcd7;
+
       color-scheme: dark;
     }
   }
@@ -58,6 +93,7 @@ const defaultStyle = css`
     --color-primary-soft: ${palettes.dark.primary.light};
 
     --color-bg: ${palettes.dark.background.background};
+    --color-background-elevated: ${palettes.dark.background.elevated};
     --color-bg-blur: rgba(29, 29, 29, 0.4);
     --color-text: ${palettes.dark.gray[500]};
     --color-text-secondary: ${palettes.dark.gray[300]};
@@ -68,6 +104,22 @@ const defaultStyle = css`
     --color-gray-300: ${palettes.dark.gray[300]};
     --color-gray-200: ${palettes.dark.gray[200]};
     --color-gray-100: ${palettes.dark.gray[100]};
+
+    --hljs-bg: var(--color-background-elevated);
+    --hljs-text: #c9d1d9;
+    --hljs-keyword: #ff7b72;
+    --hljs-title: #d2a8ff;
+    --hljs-attr: #79c0ff;
+    --hljs-string: #a5d6ff;
+    --hljs-built-in: #ffa657;
+    --hljs-comment: #8b949e;
+    --hljs-name: #7ee787;
+    --hljs-section: #1f6feb;
+    --hljs-bullet: #f2cc60;
+    --hljs-addition-bg: #033a16;
+    --hljs-addition-text: #aff5b4;
+    --hljs-deletion-bg: #67060c;
+    --hljs-deletion-text: #ffdcd7;
 
     color-scheme: dark;
   }
@@ -134,6 +186,100 @@ const defaultStyle = css`
   :focus-visible {
     outline: 2px solid var(--color-primary);
     outline-offset: 2px;
+  }
+
+  .hljs {
+    display: block;
+    overflow-x: auto;
+    background: var(--hljs-bg);
+    color: var(--hljs-text);
+  }
+
+  .hljs-doctag,
+  .hljs-keyword,
+  .hljs-meta .hljs-keyword,
+  .hljs-template-tag,
+  .hljs-template-variable,
+  .hljs-type,
+  .hljs-variable.language_ {
+    color: var(--hljs-keyword);
+  }
+
+  .hljs-title,
+  .hljs-title.class_,
+  .hljs-title.class_.inherited__,
+  .hljs-title.function_ {
+    color: var(--hljs-title);
+  }
+
+  .hljs-attr,
+  .hljs-attribute,
+  .hljs-literal,
+  .hljs-meta,
+  .hljs-number,
+  .hljs-operator,
+  .hljs-selector-attr,
+  .hljs-selector-class,
+  .hljs-selector-id,
+  .hljs-variable {
+    color: var(--hljs-attr);
+  }
+
+  .hljs-meta .hljs-string,
+  .hljs-regexp,
+  .hljs-string {
+    color: var(--hljs-string);
+  }
+
+  .hljs-built_in,
+  .hljs-symbol {
+    color: var(--hljs-built-in);
+  }
+
+  .hljs-code,
+  .hljs-comment,
+  .hljs-formula {
+    color: var(--hljs-comment);
+  }
+
+  .hljs-name,
+  .hljs-quote,
+  .hljs-selector-pseudo,
+  .hljs-selector-tag {
+    color: var(--hljs-name);
+  }
+
+  .hljs-subst {
+    color: var(--hljs-text);
+  }
+
+  .hljs-section {
+    color: var(--hljs-section);
+    font-weight: 700;
+  }
+
+  .hljs-bullet {
+    color: var(--hljs-bullet);
+  }
+
+  .hljs-emphasis {
+    color: var(--hljs-text);
+    font-style: italic;
+  }
+
+  .hljs-strong {
+    color: var(--hljs-text);
+    font-weight: 700;
+  }
+
+  .hljs-addition {
+    background-color: var(--hljs-addition-bg);
+    color: var(--hljs-addition-text);
+  }
+
+  .hljs-deletion {
+    background-color: var(--hljs-deletion-bg);
+    color: var(--hljs-deletion-text);
   }
 `;
 

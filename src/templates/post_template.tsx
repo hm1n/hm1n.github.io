@@ -82,9 +82,11 @@ const ThumbnailImage = styled(GatsbyImage)`
   background: var(--color-gray-100);
   overflow: hidden;
   margin-top: 40px;
+  margin-bottom: 48px;
 
   @media (max-width: ${breakpoints.mobile - 1}px) {
     width: 100%;
+    margin-bottom: 40px;
   }
 `;
 

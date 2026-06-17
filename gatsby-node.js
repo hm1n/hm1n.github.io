@@ -48,6 +48,10 @@ exports.createSchemaCustomization = ({ actions }) => {
       slug: String!
     }
 
+    type MarkdownRemarkFrontmatter {
+      thumbnail: File @fileByRelativePath
+    }
+
     type MarkdownRemark implements Node {
       fields: MarkdownRemarkFields
     }

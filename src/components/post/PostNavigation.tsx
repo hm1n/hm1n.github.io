@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import { breakpoints } from '../../styles/theme';
 
 const MOBILE_MAX_WIDTH_PX = breakpoints.mobile - 1;
+const NESTED_INDENT_PX = 20;
 
 export type PostNavigationItem = {
   id: string;
@@ -55,7 +56,7 @@ const ItemRow = styled.li<{ active?: boolean; depth?: number }>`
   color: ${({ active }) => (active ? 'var(--color-primary)' : 'var(--color-gray-200)')};
   cursor: pointer;
   white-space: pre-wrap;
-  padding-left: ${({ depth }) => (depth ? Math.max(0, (depth - 1) * 8) : 0)}px;
+  padding-left: ${({ depth }) => (depth ? Math.max(0, (depth - 1) * NESTED_INDENT_PX) : 0)}px;
 
   &:focus-visible {
     outline: 2px solid var(--color-primary);

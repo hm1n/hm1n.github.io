@@ -13,18 +13,19 @@ const Wrapper = styled.div`
 `;
 
 const DateText = styled.p`
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
   line-height: normal;
   color: var(--color-gray-200);
   text-align: left;
+  margin-bottom: 12px;
 `;
 
 const Title = styled.h1`
   margin-top: 4px;
-  font-size: 24px;
+  font-size: 32px;
   font-weight: 700;
-  line-height: 38.4px;
+  line-height: 1.4;
   color: var(--color-text);
 `;
 
