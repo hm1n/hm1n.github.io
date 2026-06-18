@@ -171,7 +171,7 @@ export default MessageItem;
 export default memo(MessageItem);
 ```
 
-![memo를 사용하면 컴포넌트의 Props가 변경되지 않은 경우 리렌더링을 건너뛸 수 있습니다](https://ko.react.dev/reference/react/memo). 따라서 새 메시지가 추가되더라도 기존 메시지 아이템은 렌더링 되지 않아 렌더링 비용을 줄일 수 있습니다.
+[memo를 사용하면 컴포넌트의 Props가 변경되지 않은 경우 리렌더링을 건너뛸 수 있습니다.](https://ko.react.dev/reference/react/memo) 따라서 새 메시지가 추가되더라도 기존 메시지 아이템은 렌더링 되지 않아 렌더링 비용을 줄일 수 있습니다.
 
 2단계까지 진행한 후, 채팅을 1개 발송할 때의 성능을 다시 측정해 보았습니다.
 
