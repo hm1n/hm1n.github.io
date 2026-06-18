@@ -7,6 +7,8 @@
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
+const gaMeasurementId = process.env.GATSBY_GA_MEASUREMENT_ID;
+
 module.exports = {
   siteMetadata: {
     title: `hm1nlog`,
@@ -103,5 +105,19 @@ module.exports = {
         policy: [{ userAgent: '*', allow: '/' }],
       },
     },
+    ...(gaMeasurementId
+      ? [
+          {
+            resolve: 'gatsby-plugin-google-gtag',
+            options: {
+              trackingIds: [gaMeasurementId],
+              pluginConfig: {
+                head: true,
+                respectDNT: true,
+              },
+            },
+          },
+        ]
+      : []),
   ],
 };
