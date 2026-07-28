@@ -72,10 +72,21 @@ const MarkdownRenderer = styled.div`
   }
 
   blockquote {
+    position: relative;
     margin: 24px 0;
-    padding: 8px;
-    border-left: 2px solid var(--color-primary);
-    color: var(--color-text);
+    padding: 8px 8px 8px 16px;
+    color: var(--color-text-secondary);
+  }
+
+  blockquote::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 3px;
+    background-color: var(--color-primary);
+    transform: scaleY(0.6666);
   }
 
   ol,
