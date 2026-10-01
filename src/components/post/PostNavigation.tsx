@@ -47,6 +47,7 @@ const List = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 8px;
+  word-break: keep-all;
 `;
 
 const ItemRow = styled.li<{ active?: boolean; depth?: number }>`
