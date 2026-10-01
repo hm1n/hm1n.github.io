@@ -180,7 +180,7 @@ const Header: FunctionComponent = function () {
               tech
             </MenuLink>
             <MenuAnchor
-              href="https://shinhm1.notion.site/FrontEnd-Developer-387e7e8fdd12803bb64ef0f3f26efacf?pvs=74"
+              href="/resume.pdf"
               target="_blank"
               rel="noreferrer"
               active={false}
