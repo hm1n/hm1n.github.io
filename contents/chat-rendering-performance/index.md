@@ -1,9 +1,9 @@
 ---
 date: '2026-06-17'
-title: '채팅방 렌더링 성능을 개선해보자 (feat. React DevTools)'
+title: '채팅방 렌더링 성능을 개선해 보자 (feat. React DevTools)'
 categories: ['React', 'Performance', 'Optimization']
 summary: 'React DevTools로 채팅방 렌더링 성능을 측정하고, 컴포넌트 분리와 메모이제이션 등으로 성능을 개선한 과정을 정리합니다.'
-thumbnail: './chat-performance-thumbnail.png'
+thumbnail: './thumbnail.png'
 ---
 
 이 글은 현재 제가 운영 중인 서비스, [엔빵](https://www.nbread.co.kr/)의 채팅방 렌더링 성능을 개선한 과정과 그 결과에 대해 작성한 글입니다.
